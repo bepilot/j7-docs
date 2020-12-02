@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.8.2. TensorFlow Lite &mdash; Processor SDK Linux for J721e Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="Processor SDK Linux for J721e Documentation" href="../../../index.html"/>
+        <link rel="up" title="3.8. Machine Learning" href="../../Foundational_Components_Machine_Learning.html"/>
+        <link rel="next" title="3.9. ARM Trusted Firmware-A" href="../../Foundational_Components_ATF.html"/>
+        <link rel="prev" title="3.8.1. Neo-AI Deep Learning Runtime" href="neo.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../../../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../devices/J7/linux/index.html" class="icon icon-home"> Processor SDK Linux for J721e
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                07_01_00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/J7/linux/Release_Specific.html">2. Release Specific</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../Foundational_Components.html">3. Foundational Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_U-Boot.html">3.1. U-Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Kernel.html">3.2. Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Filesystem.html">3.3. Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Tools.html">3.4. Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_IPCLLD.html">3.5. IPC Low Level Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Graphics.html">3.6. Graphics and Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Virtualization.html">3.7. Virtualization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../Foundational_Components_Machine_Learning.html">3.8. Machine Learning</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="neo.html">3.8.1. Neo-AI Deep Learning Runtime</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.8.2. TensorFlow Lite</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">3.8.2.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#supported-version">3.8.2.2. Supported version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tensorflow-lite-example-applications">3.8.2.3. TensorFlow Lite example applications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_ATF.html">3.9. ARM Trusted Firmware-A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_OPTEE.html">3.10. OP-TEE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../How_to_Guides.html">4. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Documentation_Tarball.html">5. Documentation Tarball</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../devices/J7/linux/index.html">Processor SDK Linux for J721e</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../devices/J7/linux/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../Foundational_Components.html">3. Foundational Components</a> &raquo;</li>
+      
+          <li><a href="../../Foundational_Components_Machine_Learning.html">3.8. Machine Learning</a> &raquo;</li>
+      
+    <li>3.8.2. TensorFlow Lite</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tensorflow-lite">
+<h1>3.8.2. TensorFlow Lite<a class="headerlink" href="#tensorflow-lite" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>3.8.2.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.tensorflow.org/lite">TensorFlow Lite</a> is an open source library for deep learning models.
+TensorFlow Lite runs on Jacinto Arm cores.</p>
+</div>
+<div class="section" id="supported-version">
+<h2>3.8.2.2. Supported version<a class="headerlink" href="#supported-version" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>TensorFlow Lite 1.15</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tensorflow-lite-example-applications">
+<h2>3.8.2.3. TensorFlow Lite example applications<a class="headerlink" href="#tensorflow-lite-example-applications" title="Permalink to this headline">¶</a></h2>
+<p>TensoreFlow Lite example applications are installed on filesystem at /usr/share/tensorflow-lite/examples.
+One TensorFlow Lite model (mobilenet_v1_1.0_224_quant.tflite) is also installed at the same place for demonstration.
+To use other TensorFlow Lite models, such as <a class="reference external" href="https://www.tensorflow.org/lite/guide/hosted_models">TensorFlow Lite Hosted Models</a>,
+please download those models and then copy them to the target.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>root@am57xx-evm:/usr/share/tensorflow-lite/examples# ls -l
+total <span class="m">8356</span>
+-rwxr-xr-x <span class="m">1</span> root root <span class="m">2423336</span> Aug <span class="m">28</span> <span class="m">08</span>:27 benchmark_model
+-rw-r--r-- <span class="m">1</span> root root  <span class="m">940650</span> Aug <span class="m">28</span> <span class="m">07</span>:56 grace_hopper.bmp
+-rwxr-xr-x <span class="m">1</span> root root <span class="m">2288600</span> Aug <span class="m">28</span> <span class="m">08</span>:27 label_image
+-rw-r--r-- <span class="m">1</span> root root   <span class="m">10484</span> Aug <span class="m">28</span> <span class="m">07</span>:56 labels.txt
+-rwxr-xr-x <span class="m">1</span> root root <span class="m">2251048</span> Aug <span class="m">28</span> <span class="m">08</span>:27 minimal
+-rw-r--r-- <span class="m">1</span> root root <span class="m">4276352</span> Aug <span class="m">28</span> <span class="m">07</span>:56 mobilenet_v1_1.0_224_quant.tflite
+-rwxr-xr-x <span class="m">1</span> root root    <span class="m">2152</span> Aug <span class="m">28</span> <span class="m">07</span>:56 tflite-benchmark.she
+</pre></div>
+</div>
+<div class="section" id="running-benchmark-model">
+<h3>3.8.2.3.1. Running benchmark_model<a class="headerlink" href="#running-benchmark-model" title="Permalink to this headline">¶</a></h3>
+<p>The <em>benchmark_model</em> binary performs computation benchmarking for Tensorflow Lite models. Usage of <em>benchmark_model</em>:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>usage: ./benchmark_model
+Flags:
+        --num_runs=50   int32   number of runs
+        --run_delay=-1  float   delay between runs in seconds
+        --num_threads=1 int32   number of threads
+        --benchmark_name=       string  benchmark name
+        --output_prefix=        string  benchmark output prefix
+        --warmup_runs=1 int32   how many runs to initialize model
+        --graph=        string  graph file name
+        --input_layer=  string  input layer names
+        --input_layer_shape=    string  input layer shape
+        --use_nnapi=false       bool    use nnapi api
+</pre></div>
+</div>
+<p>Example of running <em>benchmark_model</em> on target using the pre-installed mobilenet_v1_1.0_224_quant.tflite model:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># cd /usr/share/tensorflow-lite/examples
+# ./benchmark_model --graph=mobilenet_v1_1.0_224_quant.tflite
+STARTING!
+Min num runs: [50]
+Min runs duration (seconds): [1]
+Max runs duration (seconds): [150]
+Inter-run delay (seconds): [-1]
+Num threads: [1]
+Benchmark name: []
+Output prefix: []
+Min warmup runs: [1]
+Min warmup runs duration (seconds): [0.5]
+Graph: [mobilenet_v1_1.0_224_quant.tflite]
+Input layers: []
+Input shapes: []
+Use nnapi : [0]
+Use legacy nnapi : [0]
+Use gpu : [0]
+Allow fp16 : [0]
+Require full delegation : [0]
+Enable op profiling: [0]
+Max profiling buffer entries: [1024]
+Loaded model mobilenet_v1_1.0_224_quant.tflite
+resolved reporter
+Initialized session in 126.941ms
+Running benchmark for at least 1 iterations and at least 0.5 seconds but termin.
+count=7 first=80936 curr=73720 min=73663 max=80936 avg=74766.3 std=2519
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-label-image-example">
+<h3>3.8.2.3.2. Running label_image example<a class="headerlink" href="#running-label-image-example" title="Permalink to this headline">¶</a></h3>
+<p>The <em>label_image</em> provides an image classification example using TensorFlow Lite.
+Options for <em>label_image</em>:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>--accelerated, -a: [0|1], use Android NNAPI or not
+--count, -c: loop interpreter-&gt;Invoke() for certain times
+--input_mean, -b: input mean
+--input_std, -s: input standard deviation
+--image, -i: image_name.bmp
+--labels, -l: labels for the model
+--tflite_model, -m: model_name.tflite
+--profiling, -p: [0|1], profiling or not
+--num_results, -r: number of results to show
+--threads, -t: number of threads
+--verbose, -v: [0|1] print more information
+</pre></div>
+</div>
+<p>Example of running <em>label_image</em> on target, using the pre-installed mobilenet_v1_1.0_224_quant.tflite model,
+<a class="reference external" href="https://raw.githubusercontent.com/tensorflow/tensorflow/r1.12/tensorflow/contrib/lite/examples/label_image/testdata/grace_hopper.bmp">grace_hopper.bmp</a>, and labels.txt.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># cd /usr/share/tensorflow-lite/examples
+# ./label_image -i grace_hopper.bmp -l labels.txt -m mobilenet_v1_1.0_224_quant.tflite
+Loaded model mobilenet_v1_1.0_224_quant.tflite
+resolved reporter
+invoked
+average time: 164.164 ms
+0.780392: 653 military uniform
+0.105882: 907 Windsor tie
+0.0156863: 458 bow tie
+0.0117647: 466 bulletproof vest
+0.00784314: 835 suit
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Foundational_Components_ATF.html" class="btn btn-neutral float-right" title="3.9. ARM Trusted Firmware-A" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="neo.html" class="btn btn-neutral" title="3.8.1. Neo-AI Deep Learning Runtime" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'07_01_00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>

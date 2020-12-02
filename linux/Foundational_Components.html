@@ -1,0 +1,566 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Foundational Components &mdash; Processor SDK Linux for J721e Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Processor SDK Linux for J721e Documentation" href="../index.html"/>
+        <link rel="next" title="3.1. U-Boot" href="Foundational_Components_U-Boot.html"/>
+        <link rel="prev" title="2.3. Supported Platforms and Versions" href="../devices/J7/linux/Release_Specific_Supported_Platforms_and_Versions.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../devices/J7/linux/index.html" class="icon icon-home"> Processor SDK Linux for J721e
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                07_01_00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/J7/linux/Release_Specific.html">2. Release Specific</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Foundational Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_U-Boot.html">3.1. U-Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Kernel.html">3.2. Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Filesystem.html">3.3. Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Tools.html">3.4. Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_IPCLLD.html">3.5. IPC Low Level Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Graphics.html">3.6. Graphics and Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Virtualization.html">3.7. Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Machine_Learning.html">3.8. Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_ATF.html">3.9. ARM Trusted Firmware-A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_OPTEE.html">3.10. OP-TEE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="How_to_Guides.html">4. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation_Tarball.html">5. Documentation Tarball</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../devices/J7/linux/index.html">Processor SDK Linux for J721e</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../devices/J7/linux/index.html">Docs</a> &raquo;</li>
+      
+    <li>3. Foundational Components</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="foundational-components">
+<h1>3. Foundational Components<a class="headerlink" href="#foundational-components" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_U-Boot.html">3.1. U-Boot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_U-Boot.html#u-boot-user-s-guide">3.1.1. U-Boot User’s Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#overview">3.1.1.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#general-information">3.1.1.2. General Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#getting-the-u-boot-source-code">3.1.1.2.1. Getting the U-Boot Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#build-and-boot-flow-on-32-bit-platforms">3.1.1.2.2. Build and Boot Flow on 32-bit platforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#build-and-boot-flow-on-64-bit-platforms-based-on-k3-architecture">3.1.1.2.3. Build and Boot Flow on 64-bit platforms (based on K3 architecture)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#u-boot-environment">3.1.1.2.4. U-Boot Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#available-ram-for-image-download">3.1.1.2.5. Available RAM for image download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#device-trees">3.1.1.2.6. Device Trees</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#usb-device-firmware-upgrade-dfu">3.1.1.3. USB Device Firmware Upgrade (DFU)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#usb-peripheral-boot-mode-spl-dfu-support">3.1.1.3.1. USB Peripheral boot mode (SPL-DFU support)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#network-wired-or-usb-client">3.1.1.4. Network (Wired or USB Client)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-u-boot-from-the-network">3.1.1.4.1. Booting U-Boot from the network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#multiple-interfaces">3.1.1.4.2. Multiple Interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#network-configuration-via-dhcp">3.1.1.4.3. Network configuration via DHCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#manual-network-configuration">3.1.1.4.4. Manual network configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#disabling-gigabit-phy-advertising">3.1.1.4.5. Disabling Gigabit Phy Advertising</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-linux-from-the-network">3.1.1.4.6. Booting Linux from the network</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#nand">3.1.1.5. NAND</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#erasing-reading-and-writing-to-from-nand-partitions">3.1.1.5.1. Erasing, Reading and Writing to/from NAND partitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#writing-to-nand-via-dfu">3.1.1.5.2. Writing to NAND via DFU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#nand-boot">3.1.1.5.3. NAND Boot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-kernel-and-filesystem-from-nand">3.1.1.5.4. Booting Kernel and Filesystem from NAND</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#sd-emmc-or-usb-storage">3.1.1.6. SD, eMMC or USB Storage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#partitioning-emmc-from-u-boot">3.1.1.6.1. Partitioning eMMC from U-Boot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#updating-an-sd-card-from-a-host-pc">3.1.1.6.2. Updating an SD card from a host PC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#updating-an-sd-card-or-emmc-using-dfu">3.1.1.6.3. Updating an SD card or eMMC using DFU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#updating-an-sd-card-or-emmc-with-raw-writes">3.1.1.6.4. Updating an SD card or eMMC with RAW writes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-linux-from-sd-card-or-emmc">3.1.1.6.5. Booting Linux from SD card or eMMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-mlo-and-u-boot-from-emmc-boot-partition">3.1.1.6.6. Booting MLO and u-boot from eMMC boot partition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-tiboot3-bin-tispl-bin-and-u-boot-img-from-emmc-boot-partition">3.1.1.6.7. Booting tiboot3.bin, tispl.bin and u-boot.img from eMMC boot partition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-linux-from-usb-storage">3.1.1.6.8. Booting Linux from USB storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-from-sd-emmc-from-spl-single-stage-or-falcon-mode">3.1.1.6.9. Booting from SD/eMMC from SPL (Single stage or Falcon mode)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#spi">3.1.1.7. SPI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#writing-to-spi-from-u-boot">3.1.1.7.1. Writing to SPI from U-Boot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-from-spi">3.1.1.7.2. Booting from SPI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#ospi-qspi">3.1.1.8. OSPI/QSPI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#am654-j721e-support">3.1.1.8.1. AM654/J721E Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#j7200-support">3.1.1.8.2. J7200 Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#dra7xx-support">3.1.1.8.3. DRA7xx support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#am335x-support">3.1.1.8.4. AM335X support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#am43xx-support">3.1.1.8.5. AM43xx support</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#nor">3.1.1.9. NOR</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#writing-to-nor-from-u-boot">3.1.1.9.1. Writing to NOR from U-Boot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-from-nor">3.1.1.9.2. Booting from NOR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#uart">3.1.1.10. UART</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#booting-u-boot-from-the-console-uart">3.1.1.10.1. Booting U-Boot from the console UART</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#sata">3.1.1.11. SATA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#viewing-sata-devices">3.1.1.11.1. Viewing SATA Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#viewing-partitions">3.1.1.11.2. Viewing Partitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#identifying-partition-filesystem-type">3.1.1.11.3. Identifying Partition Filesystem Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#viewing-reading-and-writing-to-partition">3.1.1.11.4. Viewing, Reading and Writing to Partition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#view-partition-contents">3.1.1.11.5. View Partition Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#ufs">3.1.1.12. UFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#ddr3-ecc">3.1.1.13. DDR3 ECC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#ddr3-ecc-in-keystone-ii">3.1.1.13.1. DDR3 ECC in Keystone-II</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components_U-Boot.html#ddr3-ecc-handling">3.1.1.13.1.1. DDR3 ECC Handling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#hyperbus-and-hyperflash">3.1.1.14. HyperBus and HyperFlash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#remoteproc">3.1.1.15. REMOTEPROC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#uboot-spl-debugging-tips">3.1.1.16. Uboot SPL Debugging Tips</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-1-downloading-ccs">3.1.1.16.1. Step 1: Downloading CCS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-2-creating-a-target-configuration-file">3.1.1.16.2. Step 2: Creating a Target Configuration File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-3-loading-symbol-files">3.1.1.16.3. Step 3: Loading Symbol files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#loading-uboot-through-code-composer-studio-ccs">3.1.1.17. Loading Uboot through Code Composer Studio (CCS)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-1-software-downloads">3.1.1.17.1. Step 1: Software Downloads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-2-testing-hardware-connection">3.1.1.17.2. Step 2: Testing Hardware Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-3-building-the-spl-uboot-images">3.1.1.17.3. Step 3: Building the SPL/Uboot images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-4-ccs-configuration">3.1.1.17.4. Step 4: CCS Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-5-change-arm-mode">3.1.1.17.5. Step 5: Change ARM mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-6-loading-spl">3.1.1.17.6. Step 6: Loading SPL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components_U-Boot.html#step-7-loading-uboot-image">3.1.1.17.7. Step 7: Loading Uboot Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_U-Boot.html#u-boot-release-notes">3.1.2. U-Boot Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#build-information">3.1.2.1. Build Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_U-Boot.html#known-issues">3.1.2.2. Known Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_U-Boot.html#u-boot-splash-screen">3.1.3. U-Boot Splash Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_U-Boot.html#troubleshooting">3.1.4. Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_Kernel.html">3.2. Kernel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Kernel_Users_Guide.html">3.2.1. Users Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Kernel_Drivers.html">3.2.2. Kernel Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/ADC.html">3.2.2.1. ADC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Audio.html">3.2.2.2. Audio</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Audio.html#introduction">3.2.2.2.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Audio.html#generic-commands-and-instructions">3.2.2.2.2. Generic commands and instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Audio.html#board-specific-instructions">3.2.2.2.3. Board-specific instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Audio.html#potential-issues">3.2.2.2.4. Potential issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Audio.html#additional-information">3.2.2.2.5. Additional Information</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Crypto.html">3.2.2.3. Crypto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html">3.2.2.4. DSS (DSS6 &amp; DSS7)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#introduction">3.2.2.4.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#supported-devices">3.2.2.4.2. Supported Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#hardware-architecture">3.2.2.4.3. Hardware Architecture</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#display-controller-dispc">3.2.2.4.3.1. Display Controller (DISPC)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#soc-hardware-features">3.2.2.4.3.2. SoC Hardware Features</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#driver-architecture">3.2.2.4.4. Driver Architecture</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#driver-features">3.2.2.4.4.1. Driver Features</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#driver-configuration">3.2.2.4.5. Driver Configuration</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#kernel-configuration-options">3.2.2.4.5.1. Kernel Configuration Options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#display-sharing-configuration-options">3.2.2.4.5.2. Display Sharing Configuration Options</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#driver-usage">3.2.2.4.6. Driver Usage</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#loading-tidss">3.2.2.4.6.1. Loading tidss</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#using-tidss">3.2.2.4.6.2. Using tidss</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#testing-tidss">3.2.2.4.6.3. Testing tidss</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#tidss-properties">3.2.2.4.6.4. tidss properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#buffers">3.2.2.4.6.5. Buffers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Display/DSS7.html#fbdev-emulation-dev-fb0">3.2.2.4.6.6. fbdev emulation (/dev/fb0)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/GPIO.html">3.2.2.5. GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html">3.2.2.6. HyperBus and HyperFlash</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html#introduction">3.2.2.6.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html#driver-architecture">3.2.2.6.2. Driver Architecture</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html#kernel-configuration-options">3.2.2.6.2.1. Kernel Configuration Options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html#dt-configuration">3.2.2.6.2.2. DT Configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html#driver-usage">3.2.2.6.2.3. Driver Usage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/HYPERFLASH.html#testing">3.2.2.6.2.4. Testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/I2C.html">3.2.2.7. I2C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW2g.html">3.2.2.8. CPSW2g Ethernet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW2g.html#introduction">3.2.2.8.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW2g.html#common-platform-time-sync-cpts-module">3.2.2.8.2. Common Platform Time Sync (CPTS) module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW2g.html#ehnancements-for-scheduled-traffic-est-offload">3.2.2.8.3. Ehnancements for Scheduled Traffic (EST) Offload</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW2g.html#intersperse-express-traffic-iet-frame-preemption-offload">3.2.2.8.4. Intersperse Express Traffic (IET) Frame Preemption offload</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW9g_virt_mac.html">3.2.2.9. CPSW9g virtual MAC (remoteproc)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW9g_virt_mac.html#introduction">3.2.2.9.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW9g_virt_mac.html#enabling-j721e-cpsw-virt-mac-driver">3.2.2.9.2. Enabling j721e-cpsw-virt-mac driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Network/CPSW9g_virt_mac.html#user-space-interface">3.2.2.9.3. User space interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/PCIe/PCIe_End_Point.html">3.2.2.10. PCIe End Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/PCIe/PCIe_Backplane.html">3.2.2.11. PCIe Backplane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/PCIe/PCIe_Root_Complex.html">3.2.2.12. PCIe Root Complex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/QSPI.html">3.2.2.13. OSPI/QSPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/SPI.html">3.2.2.14. SPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/NAND.html">3.2.2.15. NAND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html">3.2.2.16. MMC/SD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html#introduction">3.2.2.16.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html#references">3.2.2.16.2. References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html#acronyms-definitions">3.2.2.16.3. Acronyms &amp; Definitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html#features">3.2.2.16.4. Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html#supported-high-speed-modes">3.2.2.16.5. Supported High Speed Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/Storage/MMC-SD.html#driver-configuration">3.2.2.16.6. Driver Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/UART.html">3.2.2.17. UART</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/UART.html#introduction">3.2.2.17.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/UART.html#driver-features">3.2.2.17.2. Driver Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/UART.html#basic-external-loopback-testing">3.2.2.17.3. Basic External loopback testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Kernel/Kernel_Drivers/USB/CDNS3.html">3.2.2.18. USB CDNS3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Kernel_LTP-DDT_Validation.html">3.2.3. LTP-DDT Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Kernel_FAQs.html">3.2.4. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_Filesystem.html">3.3. Filesystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_Tools.html">3.4. Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Tools/Development_Tools.html">3.4.1. Development Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Development_Tools.html#processor-sdk-linux-top-level-makefile">3.4.1.1. Processor SDK Linux Top-Level Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Development_Tools.html#processor-sdk-linux-gcc-toolchain">3.4.1.2. Processor SDK Linux GCC Toolchain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Development_Tools.html#creating-sd-cards">3.4.1.3. Creating SD Cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Development_Tools.html#processor-sdk-linux-setup-script">3.4.1.4. Processor SDK Linux Setup Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Tools/Flash_Tools.html">3.4.2. Flash Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Flash_Tools.html#am335x-am437x-flash-programming">3.4.2.1. AM335x/AM437x Flash Programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Flash_Tools.html#sitara-uniflash">3.4.2.2. Sitara Uniflash</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Tools/Pin_Mux_Tools.html">3.4.3. Pin Mux Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Tools/Code_Composer_Studio.html">3.4.4. Code Composer Studio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Code_Composer_Studio.html#ccs-installation">3.4.4.1. CCS Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Code_Composer_Studio.html#ccs-compiling">3.4.4.2. CCS Compiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Code_Composer_Studio.html#remote-explorer-setup-with-ccs">3.4.4.3. Remote Explorer Setup with CCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Code_Composer_Studio.html#gdb-setup-with-ccs">3.4.4.4. GDB Setup with CCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Tools/Code_Composer_Studio.html#kernel-debugging-with-ccs">3.4.4.5. Kernel Debugging with CCS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_IPCLLD.html">3.5. IPC Low Level Driver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_IPCLLD.html#overview">3.5.1. Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_Graphics.html">3.6. Graphics and Display</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html">3.6.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#software-architecture">3.6.2. Software Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#graphics-demos">3.6.3. Graphics Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#display">3.6.4. Display</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#finding-connector-id">3.6.4.1. Finding Connector ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#finding-plane-id">3.6.4.2. Finding Plane ID</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#wayland-weston">3.6.5. Wayland/Weston</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#running-weston-clients">3.6.5.1. Running Weston clients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#running-multimedia-with-wayland-sink">3.6.5.2. Running multimedia with Wayland sink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#exiting-weston">3.6.5.3. Exiting Weston</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#using-ivi-shell-feature">3.6.5.4. Using IVI shell feature</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#running-weston-s-sample-client-applications-with-ivi-shell">3.6.5.4.1. Running Weston’s sample client applications with IVI shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#running-qt-applications-with-ivi-shell">3.6.5.4.2. Running QT applications with IVI shell</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#using-the-powervr-tools">3.6.6. Using the PowerVR Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#pvrtune">3.6.6.1. PVRTune</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Graphics/Graphics_and_Display.html#pvrtrace">3.6.6.2. PVRTrace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_Virtualization.html">3.7. Virtualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Virtualization/Jailhouse.html">3.7.1. Jailhouse Hypervisor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Virtualization/Jailhouse.html#keystone3-jailhouse-demo">3.7.1.1. Keystone3 Jailhouse Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html">3.7.2. Docker Linux Container Runtime</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html#overview">3.7.2.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html#exploring-docker-in-processor-sdk">3.7.2.2. Exploring Docker In Processor SDK</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html#booting-the-docker-filesystem">3.7.2.2.1. Booting the Docker Filesystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html#configuring-the-docker-daemon">3.7.2.2.2. Configuring the Docker daemon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html#docker-hello-world">3.7.2.2.3. Docker Hello World</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Virtualization/Docker.html#docker-references">3.7.2.3. Docker References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_Machine_Learning.html">3.8. Machine Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Machine_Learning/neo.html">3.8.1. Neo-AI Deep Learning Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components/Machine_Learning/tflite_j7.html">3.8.2. TensorFlow Lite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Machine_Learning/tflite_j7.html#introduction">3.8.2.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Machine_Learning/tflite_j7.html#supported-version">3.8.2.2. Supported version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components/Machine_Learning/tflite_j7.html#tensorflow-lite-example-applications">3.8.2.3. TensorFlow Lite example applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Machine_Learning/tflite_j7.html#running-benchmark-model">3.8.2.3.1. Running benchmark_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Foundational_Components/Machine_Learning/tflite_j7.html#running-label-image-example">3.8.2.3.2. Running label_image example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_ATF.html">3.9. ARM Trusted Firmware-A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Foundational_Components_OPTEE.html">3.10. OP-TEE</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Foundational_Components_U-Boot.html" class="btn btn-neutral float-right" title="3.1. U-Boot" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../devices/J7/linux/Release_Specific_Supported_Platforms_and_Versions.html" class="btn btn-neutral" title="2.3. Supported Platforms and Versions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'07_01_00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>

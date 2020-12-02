@@ -1,0 +1,566 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.2.1. Users Guide &mdash; Processor SDK Linux for J721e Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Processor SDK Linux for J721e Documentation" href="../index.html"/>
+        <link rel="up" title="3.2. Kernel" href="Foundational_Components_Kernel.html"/>
+        <link rel="next" title="3.2.2. Kernel Drivers" href="Foundational_Components_Kernel_Drivers.html"/>
+        <link rel="prev" title="3.2. Kernel" href="Foundational_Components_Kernel.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../devices/J7/linux/index.html" class="icon icon-home"> Processor SDK Linux for J721e
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                07_01_00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devices/J7/linux/Release_Specific.html">2. Release Specific</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Foundational_Components.html">3. Foundational Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_U-Boot.html">3.1. U-Boot</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Foundational_Components_Kernel.html">3.2. Kernel</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.1. Users Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_Kernel_Drivers.html">3.2.2. Kernel Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_Kernel_LTP-DDT_Validation.html">3.2.3. LTP-DDT Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Foundational_Components_Kernel_FAQs.html">3.2.4. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Filesystem.html">3.3. Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Tools.html">3.4. Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_IPCLLD.html">3.5. IPC Low Level Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Graphics.html">3.6. Graphics and Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Virtualization.html">3.7. Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_Machine_Learning.html">3.8. Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_ATF.html">3.9. ARM Trusted Firmware-A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Foundational_Components_OPTEE.html">3.10. OP-TEE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="How_to_Guides.html">4. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation_Tarball.html">5. Documentation Tarball</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../devices/J7/linux/index.html">Processor SDK Linux for J721e</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../devices/J7/linux/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Foundational_Components.html">3. Foundational Components</a> &raquo;</li>
+      
+          <li><a href="Foundational_Components_Kernel.html">3.2. Kernel</a> &raquo;</li>
+      
+    <li>3.2.1. Users Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="users-guide">
+<h1>3.2.1. Users Guide<a class="headerlink" href="#users-guide" title="Permalink to this headline">¶</a></h1>
+<p class="rubric" id="overview-linux-kernel-ug">Overview</p>
+<p>This wiki will cover the basic steps for building the Linux kernel.</p>
+<p class="rubric" id="getting-the-kernel-source-code">Getting the Kernel Source Code</p>
+<div class="line-block">
+<div class="line">The easiest way to get access to the kernel source code is by
+downloading and installing the Processor SDK Linux J721e Once installed,
+the kernel source code is included in the SDK’s board-support
+directory. For your convenience the sources also includes the kernel’s
+git repository including commit history.</div>
+<div class="line">Alternatively, Kernel sources can directly be fetched from GIT.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="rubric" id="preparing-to-build">Preparing to Build</p>
+<p>It is important that when using the GCC toolchain provided with the SDK
+or stand alone from TI that you do <strong>NOT</strong> source the
+<em>environment-setup</em> file included with the toolchain when building the
+kernel. Doing so will cause the compilation of host side components
+within the kernel tree to fail.</p>
+<p>The following commands are intended to be run from the root of the
+kernel tree unless otherwise specified. The root of the kernel tree is
+the top-level directory and can be identified by looking for the
+“MAINTAINERS” file.</p>
+<p class="rubric" id="compiler">Compiler</p>
+<p>Before compiling the kernel or kernel modules the SDK’s toolchain needs
+to be added to the PATH environment variable</p>
+<p><code class="docutils literal"><span class="pre">export</span> <span class="pre">PATH=&lt;sdk</span> <span class="pre">path&gt;/linux-devkit/sysroots/x86_64-arago-linux/usr/bin:$PATH</span></code></p>
+<p>The current compiler supported for this release along with download
+location can be found in the release notes for the kernel release.</p>
+<p class="rubric" id="cleaning-the-kernel-sources">Cleaning the Kernel Sources</p>
+<p>Prior to compiling the Linux kernel it is often a good idea to make sure
+that the kernel sources are clean and that there are no remnants left
+over from a previous build.</p>
+<div
+style="margin: 5px; padding: 2px 10px; background-color: #ecffff; border-left: 5px solid #3399ff;"><p><strong>NOTE</strong>
+The next step will delete any saved .config file in the kernel tree as
+well as the generated object files. If you have done a previous
+configuration and do not wish to lose your configuration file you should
+save a copy of the configuration file (.config) before proceeding.</p>
+</div><p>The command to clean the kernel is:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean
+</pre></div>
+</div>
+<p class="rubric" id="configuring-the-kernel">Configuring the Kernel</p>
+<p>Before compiling the Linux kernel it needs to be configured to select
+what components will become part of the kernel image, which components
+will be build as dynamic modules, and which components will be left out
+all together. This is done using the Linux kernel configuration system.</p>
+<p class="rubric" id="using-default-configurations">Using Default Configurations</p>
+<p>It is often easiest to start with a base default configuration and then
+customize it for you use case if needed. In the Linux kernel a command
+of the form:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- &lt;defconfig&gt;
+</pre></div>
+</div>
+<p class="rubric" id="sdk-kernel-configuration">SDK Kernel Configuration</p>
+<p>For this sdk the singlecore-omap2plus_defconfig was used and is the one
+we recommend all users to use or at least use as a starting point.
+example:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- tisdk_amNNNx-evm_defconfig
+</pre></div>
+</div>
+<p>After the configuration step has run the full configuration file is
+saved to the root of the kernel tree as .config. Any further
+configuration changes are based on this file until it is cleanup up by
+doing a kernel clean as mentioned above.</p>
+<div
+style="margin: 5px; padding: 2px 10px; background-color: #ecffff; border-left: 5px solid #3399ff;"><p><strong>NOTE</strong>
+Previous SDKs recommended users use omap2plus_defconfig as their
+&lt;defconfig&gt;. For this release tisdk_[platformName]_defconfig should be
+used instead, which has included the platform name (e,g., am335x-evm for
+AM335x, am437x-evm for AM437x, am57xx-evm for AM57xx, k2hk-evm for
+K2H/K2K, k2e-evm for K2E, k2l-evm for K2L, k2g-evm for K2G, and
+omapl138-lcdk for OMAP-L138). If the kernel was downloaded directly from
+the git repository, the defconfig will need to be built with scripts.
+Please see ti_config_fragments/README within the kernel sources for
+more information. Otherwise a user will notice a significant amount of
+features not working.</p>
+</div><p>Below is the procedure to build the defconfig from the kernel git
+repository.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>$ ti_config_fragments/defconfig_builder.sh -t ti_sdk_[device]_release
+$ export ARCH=arm
+$ make ti_sdk_[device]_release_defconfig
+$ mv .config arch/arm/configs/tisdk_[platformName]-evm_defconfig
+</pre></div>
+</div>
+<p>The list of defconfig map file (i.e., ti_sdk_[device]_release used
+above) supported can be found from
+ti_config_fragments/defconfig_map.txt file.</p>
+<p class="rubric" id="customizing-the-configuration">Customizing the Configuration</p>
+<p>When you want to customize the kernel configuration the easiest way is
+to use the built in kernel configuration systems. Two of the most
+popular configuration systems are:</p>
+<p>menuconfig: an ncurses based configuration utility</p>
+<p><strong>NOTE:</strong> on some systems in order to use xconfig you may need to
+install the libqt3-mt-dev package. For example on Ubuntu 10.04 this can
+be done using the command <em>sudo apt-get install libqt3-mt-dev</em></p>
+<p>To invoke the kernel configuration you simply use a command like:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- &lt;config type&gt;
+</pre></div>
+</div>
+<p>i.e. for menuconfig the command would look like</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+</pre></div>
+</div>
+<p>Once the configuration window is open you can then select which kernel
+components should be included in the build. Exiting the configuration
+will save your selections to a file in the root of the kernel tree
+called .config.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="rubric" id="compiling-the-sources">Compiling the Sources</p>
+<p class="rubric" id="compiling-the-kernel">Compiling the Kernel</p>
+<p>Once the kernel has been configured it must be compiled to generate the
+bootable kernel image as well as any dynamic kernel modules that were
+selected.</p>
+<p>By default U-boot expects zImage to be the type of kernel image used.</p>
+<p>To just build the zImage use this command</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage
+</pre></div>
+</div>
+<p>This will result in a kernel image file being created in the
+arch/arm/boot/ directory called zImage.</p>
+<p class="rubric" id="compiling-the-device-tree-binaries">Compiling the Device Tree Binaries</p>
+<p>Starting with the 3.8 kernel each TI evm has an unique device tree
+binary file required by the kernel. Therefore, you will need to build
+and install the correct dtb for the target device. All device tree files
+are located at arch/arm/boot/dts/. Below list various TI evms and the
+matching device tree file.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Boards</th>
+<th class="head">Device Tree File</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Beaglebone Black</td>
+<td>am335x-boneblack.dts</td>
+</tr>
+<tr class="row-odd"><td>AM335x General Purpose EVM</td>
+<td>am335x-evm.dts</td>
+</tr>
+<tr class="row-even"><td>AM335x Starter Kit</td>
+<td>am335x-evmsk.dts</td>
+</tr>
+<tr class="row-odd"><td>AM335x Industrial Communications Engine</td>
+<td>am335x-icev2.dts</td>
+</tr>
+<tr class="row-even"><td>AM437x General Purpose EVM</td>
+<td>am437x-gp-evm.dts,
+am437x-gp-evm-hdmi.dts (HDMI)</td>
+</tr>
+<tr class="row-odd"><td>AM437x Starter Kit</td>
+<td>am437x-sk-evm.dts</td>
+</tr>
+<tr class="row-even"><td>AM437x Industrial Development Kit</td>
+<td>am437x-idk-evm.dts</td>
+</tr>
+<tr class="row-odd"><td>AM57xx EVM</td>
+<td>am57xx-evm.dts,
+am57xx-evm-reva3.dts (revA3 EVMs )</td>
+</tr>
+<tr class="row-even"><td>AM572x IDK</td>
+<td>am572x-idk.dts</td>
+</tr>
+<tr class="row-odd"><td>AM571x IDK</td>
+<td>am571x-idk.dts</td>
+</tr>
+<tr class="row-even"><td>AM574x IDK</td>
+<td>am574x-idk.dts</td>
+</tr>
+<tr class="row-odd"><td>K2H/K2K EVM</td>
+<td>keystone-k2hk-evm.dts</td>
+</tr>
+<tr class="row-even"><td>K2E EVM</td>
+<td>keystone-k2e-evm.dts</td>
+</tr>
+<tr class="row-odd"><td>K2L EVM</td>
+<td>keystone-k2l-evm.dts</td>
+</tr>
+<tr class="row-even"><td>K2G EVM</td>
+<td>keystone-k2g-evm.dts</td>
+</tr>
+<tr class="row-odd"><td>K2G ICE EVM</td>
+<td>keystone-k2g-ice.dts</td>
+</tr>
+<tr class="row-even"><td>OMAP-L138 LCDK</td>
+<td>da850-lcdk.dts</td>
+</tr>
+<tr class="row-odd"><td>J721e EVM</td>
+<td>k3-j721e-common-proc-board.dts</td>
+</tr>
+<tr class="row-even"><td>J7200 EVM</td>
+<td>k3-j7200-common-proc-board.dts</td>
+</tr>
+</tbody>
+</table>
+<p>Table:  Device Tree File Name Per Board</p>
+<p>To build an individual device tree file find the name of the dts file
+for the board you are using and replace the .dts extension with .dtb.
+Then run the following command:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- &lt;dt filename&gt;.dtb
+</pre></div>
+</div>
+<p>The compiled device tree file with be located in arch/arm/boot/dts.</p>
+<p>For example, the Beaglebone Black device tree file is named
+am335x-boneblack.dts. To build the device tree binary you would run:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- am335x-boneblack.dtb
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="rubric" id="compiling-the-kernel-modules">Compiling the Kernel Modules</p>
+<p>By default the majority of the Linux drivers used in the sdk are not
+integrated into the kernel image (ex zImage). These drivers are built as
+dynamic modules. The command to build these modules is:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules
+</pre></div>
+</div>
+<p>This will result in .ko (kernel object) files being placed in the kernel
+tree. These .ko files are the dynamic kernel modules.</p>
+<p>When ever you make a change to the kernel its generally recommended that
+you rebuild your kernel modules and reinstall the kernel modules.
+Otherwise the kernel modules may not load or run. The next section will
+cover how to install these modules.</p>
+<div
+style="margin: 5px; padding: 2px 10px; background-color: #ecffff; border-left: 5px solid #3399ff;"><p><strong>NOTE</strong>
+Any time you make a change to the kernel which requires you to recompile
+it you should also insure that you recompile the kernel modules and
+reinstall them. Otherwise all your kernel modules may refuse to load
+which will result in a significant loss of functionality.</p>
+</div><p class="rubric" id="installing-the-kernel">Installing the Kernel</p>
+<p>Once the Linux kernel, dtb files and modules have been compiled they
+must be installed. In the case of the kernel image this can be installed
+by copying the zImage file to the location where it is going to be read
+from. The device tree binaries should also be copied to the same
+directory that the kernel image was copied to.</p>
+<p class="rubric" id="installing-the-kernel-image-and-device-tree-binaries">Installing the Kernel Image and Device Tree Binaries</p>
+<div class="line-block">
+<div class="line">`` cd &lt;kernel sources dir&gt; sudo cp arch/arm/boot/zImage &lt;rootfs path&gt;/boot sudo cp arch/arm/boot/dts/&lt;dt file&gt;.dtb &lt;rootfs path&gt;/boot``</div>
+<div class="line">For example, if you wanted to copy the kernel image and BeagleBone
+Black device tree file to the rootfs partition of a SD card you would
+enter the below commands:
+``  cd &lt;kernel sources dir&gt; sudo cp arch/arm/boot/zImage arch/arm/boot/dts/am335x-boneblack.dtb /media/rootfs/boot``</div>
+<div class="line">Starting with U-boot 2013.10, the kernel and device tree binaries by
+default are no longer being read from the /boot/ partition on the MMC
+but from the root file system’s boot directory when booting from
+MMC/EMMC. This would mean you would copy the kernel image and device
+tree binaries to /media/rootfs/boot instead of /media/boot.</div>
+</div>
+<p class="rubric" id="installing-the-kernel-modules">Installing the Kernel Modules</p>
+<p>To install the kernel modules you use another make command similar to
+the others, but with an additional parameter which give the base
+location where the modules should be installed. This command will create
+a directory tree from that location like lib/modules/&lt;kernel version&gt;
+which will contain the dynamic modules corresponding to this version of
+the kernel. The base location should usually be the root of your target
+file system. The general format of the command is:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>sudo make ARCH=arm  INSTALL_MOD_PATH=&lt;path to root of file system&gt; modules_install
+</pre></div>
+</div>
+<p>For example if you are installing the modules on the rootfs partition of
+the SD card you would do:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>sudo make ARCH=arm INSTALL_MOD_PATH=/media/rootfs modules_install
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Append <strong>INSTALL_MOD_STRIP=1</strong> to the make modules_install command to
+reduce the size of the resulting installation</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Foundational_Components_Kernel_Drivers.html" class="btn btn-neutral float-right" title="3.2.2. Kernel Drivers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Foundational_Components_Kernel.html" class="btn btn-neutral" title="3.2. Kernel" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'07_01_00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>

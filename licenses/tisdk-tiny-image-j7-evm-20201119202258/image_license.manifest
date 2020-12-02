@@ -1,0 +1,20 @@
+RECIPE NAME: linux-ti-staging
+VERSION: 5.4.74+gitAUTOINC+9574bba32a
+LICENSE: GPLv2
+FILES: k3-j721e-vision-apps--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.dtbo k3-j721e-pcie-backplane--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.dtbo k3-j721e-common-proc-board-infotainment--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.dtbo modules--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.tgz Image--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.bin vmlinux.gz--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.bin k3-j721e-common-proc-board--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.dtb k3-j721e-proc-board-tps65917--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.dtb k3-j721e-common-proc-board-jailhouse--5.4.74+git0+9574bba32a-r0a.arago5_psdkla.2-j7-evm-20201119180859.dtbo
+
+RECIPE NAME: optee-os
+VERSION: 3.8.0+gitAUTOINC+199fca17b5
+LICENSE: BSD
+FILES: tee-header_v2.bin tee-pager_v2.bin bl32.elf tee.bin tee-pageable_v2.bin bl32.bin
+
+RECIPE NAME: trusted-firmware-a
+VERSION: 2.3
+LICENSE: BSD & Apache-2.0
+FILES: bl31-k3.bin bl31-k3.elf
+
+RECIPE NAME: u-boot-ti-staging
+VERSION: 2020.01+gitAUTOINC+3c9ebdb87d
+LICENSE: GPLv2+
+FILES: u-boot-j7-evm-2020.01+gitAUTOINC+3c9ebdb87d-r22_psdkla.img u-boot-spl.bin-j7-evm-2020.01+gitAUTOINC+3c9ebdb87d-r22_psdkla tispl.bin-j7-evm-2020.01+gitAUTOINC+3c9ebdb87d-r22_psdkla
+

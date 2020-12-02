@@ -1,0 +1,311 @@
+.. _release-specific-release-notes:
+
+************************************
+Release Notes
+************************************
+
+Overview
+========
+
+The **Processor Software Development Kit (Processor-SDK) for Linux**
+provides a fundamental software platform for development, deployment and
+execution of Linux based applications and includes the following:
+
+-  Bootloaders, Linux Kernel & Filesystem
+-  SDK installer
+-  Setup scripts
+-  Demo applications
+-  Documentation
+
+.. Note::
+    For building some of the RTOS-based demonstrations, you should also download
+    Processor SDK RTOS installer. For more information,
+    refer to <PSDKRA install path>/index.html.
+
+
+Licensing
+=========
+
+Please refer to the software manifest, which outlines the licensing
+status for all packages included in this release. The manifest can be found on the SDK
+download page or in the installed directory as indicated below. In
+addition, see `Processor SDK Linux GPLv3 Disclaimer <Overview_GPLv3_Disclaimer.html>`__.
+
+
+Documentation
+===============
+-  `Processor SDK Linux Software Developer's Guide <index.html>`__: Provides information on features, functions, delivery package and,
+   compile tools for the Processor SDK Linux release. This also provides
+   detailed information regarding software elements and software
+   infrastructure to allow developers to start creating applications.
+-  `Processor SDK Linux Getting Started Guide <Overview_Getting_Started_Guide.html>`__: Provides information on getting the software and running
+   examples/demonstrations bundled in the SDK.
+-  **Software Manifest**: Provides license information on software
+   included in the SDK release. This document is in the release at
+   ``[INSTALL-DIR]/docs``.
+-  **EVM Quick Start Guide**: Provides information on hardware setup and
+   running the demonstration application that is loaded on flash. This
+   document is provided as part of the EVM kit.
+
+
+Supported Platforms
+=====================================
+See `here <Release_Specific_Supported_Platforms_and_Versions.html>`__ for a list of supported platforms and links to more information.
+
+
+Release 07.01.00
+================
+Released November 2020
+
+
+What's New
+----------
+- Redesigned SPL to support HSM Re-architecture
+
+
+Release features
+----------------
+
+-  R5 SPL:
+
+   -  Early booting of MCU R5F and Main R5FSS Core0
+   -  Bootstrapping 2nd stage boot loader (u-boot) on A72
+   -  UART boot support.
+   -  eMMC HS400 mode support
+   -  eMMC boot support
+-  A72 U-boot:
+
+   -  Early booting of remote cores (C7x, C66x, Main subsystem R5F's) with configurable order of boot-strapping
+   -  Support for booting both compressed and uncompressed kernel image
+   -  Basic HYP mode support - boots up uboot in EL2 privileged mode
+   -  MMCSD support
+   -  SD card boot support
+   -  USB Host and mass storage support
+   -  Support for DFU download to SD card, eMMC
+   -  UFS support
+   -  eMMC boot support
+-  Kernel: Kernel image includes support for the following drivers
+
+   -  MMC support
+   -  I2C support
+   -  CPSW2G Ethernet driver
+   -  UART driver, UART console support
+   -  USB driver with support for device/host mode of operation
+   -  PCIe Root Complex  and Endpoint drivers
+   -  CPSW9G Virtual driver
+   -  USB gadget driver support
+
+      -  Composite device
+      -  Multifunction composite device
+   -  USB DRD dual role support
+   -  Support for dual voltage SD cards (UHS mode)
+   -  PCIe backplane support
+   -  PCIe Gen3 2xlane support
+   -  eMMC HS400 speed mode support
+   -  UART DMA mode support
+   -  UFS support
+   -  ADC basic functionality
+   -  Crypto acceleration support for AES, 3-DES, and RNG
+-  Graphics:
+
+   -  Support for OpenGL |reg| ES 1.x, OpenGL |reg| ES 2.0 and OpenGL |reg| ES 3.2 APIs
+   -  Weston window composition with GPU acceleration support
+   -  DRM-based display backend
+   -  Offscreen rendering mode support
+   -  DMABUF buffer import support
+   -  Support for YUV texture formats
+   -  Support for GPU profiling tools (PVRTrace and PVRTune)
+-  IPC:
+
+   -  IPC support between
+
+      -  A72 to C7x
+      -  A72 to each C66x core
+      -  A72 to each MainSS R5F core
+      -  A72 to each MCU island R5F core
+   -  Support for IPC in both IPC-only mode (core loaded by u-boot) and remoteproc mode (core loaded by Linux Kernel)
+   -  Mailbox and H/W spinlock support
+-  Display:
+
+   -  DSS support for cropping, scaling, gamma correction, per-pixel blending and global alpha blending
+   -  DSS support for Color Space Conversion (CSC) and Color Phase Rotation (CPR)
+   -  DRM API support
+   -  Support for NV12, UYVY, and XRGB888 data
+   -  Static partitioning of DSS resources and using video pipelines on shared videoport
+-  Audio:
+
+   -  Audio playback and Audio record support at 48 KHz, 24 bits per sample
+   -  Stereo and Multichannel support
+   -  Multi-codec support
+   -  McASP: Master and slave mode support
+   -  Multi-codec support with separate serializer per codec
+-  Virtualization:
+
+   -  Jailhouse hypervisor support
+   -  Static system partitioning: SD/eMMC, sproxy threads, UARTs, etc.
+   -  IO isolation between VMs
+   -  PVU and SMMU backed IO isolation support
+   -  Inter VM shared memory based communication
+-  Profiling
+
+   -  A72 PMU support for Performance profiling
+
+
+
+Component versions
+------------------
+
+.. csv-table::
+   :header: "component", "source", "branch", "version"
+   :widths: 20,40,20,30
+
+   arm-trusted-firmware,git://git.ti.com/atf/arm-trusted-firmware.git,ti-atf,52c334fc361194e3896ea3b2529c10a06e586a5f
+   optee-os,git://git.ti.com/optee/ti-optee-os.git,ti-optee-os,199fca17b575d4c748c9c435e908a6ec9618c75a
+   U-boot,git://git.ti.com/ti-u-boot/ti-u-boot.git,ti-u-boot-2020.01,3c9ebdb87d65aacc4ec302be8bef3df15364bacd
+   Linux Kernel,git://git.ti.com/ti-linux-kernel/ti-linux-kernel.git,ti-linux-5.4.y,9574bba32a1898794895ca3816e815154c80226d
+   Jailhouse,git://git.ti.com/jailhouse/ti-jailhouse.git,ti-jailhouse-0.12,0d059b6f2c3efeaa2466517300540498b34b7655
+
+
+Issues Tracker
+===============
+..
+   project = LCPD AND Platform in (j721e-evm, j721e-evm-ivi, j721e-idk-gw, j721e-hsevm) AND issuetype = Bug AND status = Closed AND resolution = Done AND component in ("Audio & Display", Baseport, Connectivity, IPC, "Power & Thermal", Graphics, Multimedia, Wireless, "System Integration", Security) AND closedDate > 2020-07-01 AND createdDate <= 2020-07-01 AND (Labels not in (LCPD_K3.14_MAINT, MAINTENANCE) OR labels is EMPTY) AND OS in (Linux, RT-linux) ORDER BY priority DESC
+
+Issues fixed in this release
+----------------------------
+.. csv-table::
+   :header: "Record ID", "Summary"
+   :widths: 20, 80
+
+   LCPD-18910,NFS boot is broken
+   LCPD-19067,CPSW2G: UDP iperf between two EVMs shows huge packet loss
+   LCPD-18909,Uboot: SPL: failed to boot from all boot devices
+   LCPD-18853,UDMA: slave_sg generates TR interrupt at the end of the transfer
+   LCPD-16120,"DP: Link fails right after link training, unless voltage swing is 2 or 3"
+
+..
+   project = LCPD AND Platform in (j721e-evm, j721e-evm-ivi, j721e-idk-gw, j721e-hsevm) AND ErrataID is not EMPTY AND status = Closed ORDER BY priority DESC
+
+Errata workarounds
+------------------
+.. csv-table::
+   :header: "Record ID", "Summary", "Workaround", "ErrataID"
+   :widths: 20, 80, 60, 20
+
+   LCPD-19068,DSS: Disabling a layer connected to Overlay may result in synclost during the next frame,,i2097
+   LCPD-19517,R5FSS: The same interrupt cannot be nested back-2-back within another interrupt,,i2162
+   LCPD-16605,MMC: MMC1/2 Speed Issue,,i2090
+   LCPD-17220,U-Boot Hyperbus: Hyperflash reads limited to 125MHz max. frequency,,i2088
+   LCPD-19047,USB: Race condition while reading TRB from system memory in device mode,,i2067
+   LCPD-16350,DSS: Frame Buffer Flip/Mirror Feature Using RGB24/BGR24 Packed Format can Result in Pixel Corruption,"If the RGB24 or BGR24 packed format is selected, then use the GPU to implement the flip/mirror operation.",i2039
+
+..
+   project in (LCPD, "ADAS Algorithms") AND issuetype = Bug AND Platform in (j721e-evm, j721e-evm-ivi, j721e-idk-gw, j721e-hsevm, J7-EVM) AND status not in ("In Build", Closed, Resolved) AND OS = Linux AND (labels != SKIP_REL_NOTES OR labels is EMPTY) AND component != "System Test" ORDER BY key ASC
+
+Open Defects
+------------
+.. csv-table::
+   :header: "Record ID", "Summary", "Workaround"
+   :widths: 20, 80, 60
+
+   LCPD-16130,Exception triggered by drm_dev_unregister during poweroff,
+   LCPD-16208,FIFO Underflows during video playback on 4k panel,
+   LCPD-16366,RGX kick test fails when 32 sync dependencies are set for each command,
+   LCPD-16505,"Wrong clock rate is reported for 157:400, 157:401 (HSDIVIDER after PLL4 and 15)",
+   LCPD-16531,video decode: vxd_dec warnings displayed at end of gstreamer hevc playback to kmssink for certain video,
+   LCPD-16535,remoteproc/k3-dsp: PDK IPC echo test binaries fails to do IPC in remoteproc mode on second run,
+   LCPD-16545,remoteproc/k3-r5f: PDK IPC echo_test image fails to boot up in remoteproc mode on second run,
+   LCPD-16591,PCIe wifi ping stress test failed,
+   LCPD-16616,Jailhouse: Failure in mhdp probe while restarting the Linux VM,
+   LCPD-16628,Could not enumerate PLEXTOR pcie SSD,
+   LCPD-16836,DP: GeChic display EDID read failures with custom DP cable,
+   LCPD-16921,GPU driver doesn't unregister genpd name on unload,
+   LCPD-17006,4k DP Display Shows Blank Screen sometimes when booting,
+   LCPD-17213,Weston sometimes fails to start when booting with nfs filesystem,
+   LCPD-17284,remoteproc/k3-r5: Cores are started out-of-order when core 0 file size >> core 1 file size,
+   LCPD-17387,Underflow and CRTC SYNC LOST observed while running GLMark2 (1x1080p + 1x4k),
+   LCPD-17398,J7 Beta board hangs and cannot power cycle via automation interface,
+   LCPD-17403,PAT: DMA-API warning,
+   LCPD-17406,U-boot: Uboot has no knowledge of memory reserved for remote cores,
+   LCPD-17418,J7 sometimes failed to boot,Flash firmware into mmc rootfs
+   LCPD-17421,CPSW9G: Can't bring up interface over NFS,
+   LCPD-17543,Some cpuhotplug tests failed,
+   LCPD-17673,No software documentation for the Timer module,
+   LCPD-17770,U-Boot: Fix order of MCU R5 shutdown depending on cluster mode,
+   LCPD-17780,Mbox timedout in resp,
+   LCPD-17794,ext4write failed to write firmware to SD card,
+   LCPD-17798,2020 LTS: INTA/INTR smp_affinity failure and IRQ allocation issues.,
+   LCPD-17814,Kingston 16G card could not boot to uboot prompt,
+   LCPD-18056,PVR Errors observed while running deqp-gles,
+   LCPD-18115,PVR Error observed while running glmark2,
+   LCPD-18233,MMC irq affinity to core 1 is not working.,
+   LCPD-18258,IPSEC perfomance failures,
+   LCPD-18754,U-Boot: Upstream: DTB getting over-written when booting kernel,
+   LCPD-18851,UYVY texture test needs update,
+   LCPD-18860,isolcpus in the command line is not honored,
+   LCPD-18894,J7 failed to boot to kernel occasionally,
+   LCPD-18912,QSPI read performance decreased,
+   LCPD-19046,Very low IPSEC throughput,
+   LCPD-19121,Displayport is not initialized,
+   LCPD-19164,perf utility missing from upstream rootfs,
+   LCPD-19177,u-boot:pytest: test_efi_helloworld_net failed on am6 and J7,
+   LCPD-19519,Kernel: RT Linux build error with SPI NOR hack to find the PHY pattern location,
+   LCPD-19659,Doc: PCIe: Update documentation to indicate how to move to compliance mode,
+   LCPD-19664,Upstream: kernel MMC dts properties need to avoid _ in property names,
+   LCPD-19732,Errors observed in boot log,
+   LCPD-19740,TLS1.2 hangs on handshake,
+   LCPD-19772,ATF/Uboot GTC frequency handover bug,
+   LCPD-19792,j721e boot fails sometimes due to EL1 exception,
+   LCPD-19818,CPSW2G netperf egress performance lower,
+   LCPD-19819,KMS ALPHABLEND tests fail due to no attribute 'get_default_mode',
+   LCPD-19820,DP tests fail due to unexpected mode frequency,
+   LCPD-19822,ARM benchmark testcases returning lower than expected performance,
+   LCPD-19828,Failed to start Start psplash boot splash screen,
+   LCPD-19829,Failed to start Synchronize System and HW clocks.,
+   LCPD-19838,Cryptodev not building against 5.10 kernel,
+   LCPD-19846,lp-12395: Uboot emmc raw read write performance is out of expected range,
+   LCPD-19848,lp-15576: Uboot UFS raw read write performance out of expected range,
+   LCPD-19854,PCIe: EP: Low Throughput using DMA,
+   LCPD-19858,OE: OPTEE label used in SDK is old and wrong,
+
+..
+   project = LCPD AND issuetype = Bug AND Platform in (j721e-evm, j721e-evm-ivi, j721e-idk-gw, j721e-hsevm) AND status = Closed AND resolution in ("Known Issue : HW Limitation", "Known Issue : Other") AND OS = Linux ORDER BY key ASC
+
+Known issues & limitations
+--------------------------
+.. csv-table::
+   :header: "Record ID", "Summary" , "Workaround"
+   :widths: 20, 80, 60
+
+   LCPD-19636,J7: OSPI Boot broken,
+   LCPD-16396,J721E: RC: Unsupported request in configuration completion packets results in an abort,"Workaround for Multifunction: Configure all the physical functions supported by the endpoint. For configuring all the 6 functions of PCIe  controller instance '1' in J721E, the following can be used. mount -t configfs none /sys/kernel/config; cd /sys/kernel/config/pci_ep/; mkdir functions/pci_epf_test/func1; echo 0x104c > functions/pci_epf_test/func1/vendorid; echo 0xb00d > functions/pci_epf_test/func1/deviceid; echo 1 > functions/pci_epf_test/func1/msi_interrupts; echo 16 > functions/pci_epf_test/func1/msix_interrupts; ln -s functions/pci_epf_test/func1 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func2; echo 0x104c > functions/pci_epf_test/func2/vendorid; echo 0xb00d > functions/pci_epf_test/func2/deviceid; echo 1 > functions/pci_epf_test/func2/msi_interrupts; echo 16 > functions/pci_epf_test/func2/msix_interrupts; ln -s functions/pci_epf_test/func2 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func3; echo 0x104c > functions/pci_epf_test/func3/vendorid; echo 0xb00d > functions/pci_epf_test/func3/deviceid; echo 1 > functions/pci_epf_test/func3/msi_interrupts; echo 16 > functions/pci_epf_test/func3/msix_interrupts; ln -s functions/pci_epf_test/func3 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func4; echo 0x104c > functions/pci_epf_test/func4/vendorid; echo 0xb00d > functions/pci_epf_test/func4/deviceid; echo 1 > functions/pci_epf_test/func4/msi_interrupts; echo 16 > functions/pci_epf_test/func4/msix_interrupts; ln -s functions/pci_epf_test/func4 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func5; echo 0x104c > functions/pci_epf_test/func5/vendorid; echo 0xb00d > functions/pci_epf_test/func5/deviceid; echo 1 > functions/pci_epf_test/func5/msi_interrupts; echo 16 > functions/pci_epf_test/func5/msix_interrupts; ln -s functions/pci_epf_test/func5 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func6; echo 0x104c > functions/pci_epf_test/func6/vendorid; echo 0xb00d > functions/pci_epf_test/func6/deviceid; echo 1 > functions/pci_epf_test/func6/msi_interrupts; echo 16 > functions/pci_epf_test/func6/msix_interrupts; ln -s functions/pci_epf_test/func6 controllers/d800000.pcie-ep/; echo 1 > controllers/d800000.pcie-ep/start; echo 1 > /sys/bus/pci/devices/0000:00:00.0/remove; echo 1 > /sys/bus/pci/rescan; Workaround for switch card: No workarounds available."
+   LCPD-16640,PCIe RC: GIC ITS misbehaves when more than 4 devices use it simultaneously,
+   LCPD-17171,Uboot dhcp occasionally failed,
+   LCPD-17172,Uboot USBhost: Sandisk Extreme USB 3.0 msc stick could not be detected at second time,
+   LCPD-17789,UBOOT J7:  Could not see UFS device by scsi scan,
+   LCPD-18790,eMMC tests failed on J7 rev E2 EVM,
+   LCPD-19068,DSS: Disabling a layer connected to Overlay may result in synclost during the next frame,
+   LCPD-19084,Few SD cards not enumerating in Kernel with Alpha EVM,
+   LCPD-19647,Poweroff Command Causing Kernel Panic,
+   LCPD-19776,j7: uboot: some socketed evms fail to boot,
+
+|
+
+
+.. rubric:: Installation and Usage
+   :name: installation-and-usage
+
+The `Software Developer's Guide <index.html>`__ provides instructions on how to setup your Linux development environment, install the SDK and start your development. It also includes User's Guides for various Example Applications.
+
+|
+
+.. rubric:: Host Support
+   :name: host-support
+
+For the specific supported hosts for current SDK, see `Supported Platforms <Release_Specific_Supported_Platforms_and_Versions.html>`__.
+
+
+.. note::
+   Processor SDK Installer is 64-bit, and installs only on 64-bit host machine. 
+
+.. |reg| unicode:: U+00AE .. REGISTERED SIGN

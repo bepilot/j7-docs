@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1. Release Notes &mdash; Processor SDK Linux for J721e Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="Processor SDK Linux for J721e Documentation" href="../../../index.html"/>
+        <link rel="up" title="2. Release Specific" href="Release_Specific.html"/>
+        <link rel="next" title="2.2. Yocto Layer Configuration" href="Release_Specific_Yocto_layer_Configuration.html"/>
+        <link rel="prev" title="2. Release Specific" href="Release_Specific.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../../../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Processor SDK Linux for J721e
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                07_01_00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/Overview.html">1. Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Release_Specific.html">2. Release Specific</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">2.1.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#licensing">2.1.2. Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">2.1.3. Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supported-platforms">2.1.4. Supported Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#release-07-01-00">2.1.5. Release 07.01.00</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-new">2.1.5.1. What’s New</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#release-features">2.1.5.2. Release features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#component-versions">2.1.5.3. Component versions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#issues-tracker">2.1.6. Issues Tracker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#issues-fixed-in-this-release">2.1.6.1. Issues fixed in this release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#errata-workarounds">2.1.6.2. Errata workarounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-defects">2.1.6.3. Open Defects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-issues-limitations">2.1.6.4. Known issues &amp; limitations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Release_Specific_Yocto_layer_Configuration.html">2.2. Yocto Layer Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release_Specific_Supported_Platforms_and_Versions.html">2.3. Supported Platforms and Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/Foundational_Components.html">3. Foundational Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/How_to_Guides.html">4. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/Documentation_Tarball.html">5. Documentation Tarball</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Processor SDK Linux for J721e</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Release_Specific.html">2. Release Specific</a> &raquo;</li>
+      
+    <li>2.1. Release Notes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="release-notes">
+<span id="release-specific-release-notes"></span><h1>2.1. Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>2.1.1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Processor Software Development Kit (Processor-SDK) for Linux</strong>
+provides a fundamental software platform for development, deployment and
+execution of Linux based applications and includes the following:</p>
+<ul class="simple">
+<li>Bootloaders, Linux Kernel &amp; Filesystem</li>
+<li>SDK installer</li>
+<li>Setup scripts</li>
+<li>Demo applications</li>
+<li>Documentation</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For building some of the RTOS-based demonstrations, you should also download
+Processor SDK RTOS installer. For more information,
+refer to &lt;PSDKRA install path&gt;/index.html.</p>
+</div>
+</div>
+<div class="section" id="licensing">
+<h2>2.1.2. Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>Please refer to the software manifest, which outlines the licensing
+status for all packages included in this release. The manifest can be found on the SDK
+download page or in the installed directory as indicated below. In
+addition, see <a class="reference external" href="Overview_GPLv3_Disclaimer.html">Processor SDK Linux GPLv3 Disclaimer</a>.</p>
+</div>
+<div class="section" id="documentation">
+<h2>2.1.3. Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="index.html">Processor SDK Linux Software Developer’s Guide</a>: Provides information on features, functions, delivery package and,
+compile tools for the Processor SDK Linux release. This also provides
+detailed information regarding software elements and software
+infrastructure to allow developers to start creating applications.</li>
+<li><a class="reference external" href="Overview_Getting_Started_Guide.html">Processor SDK Linux Getting Started Guide</a>: Provides information on getting the software and running
+examples/demonstrations bundled in the SDK.</li>
+<li><strong>Software Manifest</strong>: Provides license information on software
+included in the SDK release. This document is in the release at
+<code class="docutils literal"><span class="pre">[INSTALL-DIR]/docs</span></code>.</li>
+<li><strong>EVM Quick Start Guide</strong>: Provides information on hardware setup and
+running the demonstration application that is loaded on flash. This
+document is provided as part of the EVM kit.</li>
+</ul>
+</div>
+<div class="section" id="supported-platforms">
+<h2>2.1.4. Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="Release_Specific_Supported_Platforms_and_Versions.html">here</a> for a list of supported platforms and links to more information.</p>
+</div>
+<div class="section" id="release-07-01-00">
+<h2>2.1.5. Release 07.01.00<a class="headerlink" href="#release-07-01-00" title="Permalink to this headline">¶</a></h2>
+<p>Released November 2020</p>
+<div class="section" id="what-s-new">
+<h3>2.1.5.1. What’s New<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Redesigned SPL to support HSM Re-architecture</li>
+</ul>
+</div>
+<div class="section" id="release-features">
+<h3>2.1.5.2. Release features<a class="headerlink" href="#release-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>R5 SPL:<ul>
+<li>Early booting of MCU R5F and Main R5FSS Core0</li>
+<li>Bootstrapping 2nd stage boot loader (u-boot) on A72</li>
+<li>UART boot support.</li>
+<li>eMMC HS400 mode support</li>
+<li>eMMC boot support</li>
+</ul>
+</li>
+<li>A72 U-boot:<ul>
+<li>Early booting of remote cores (C7x, C66x, Main subsystem R5F’s) with configurable order of boot-strapping</li>
+<li>Support for booting both compressed and uncompressed kernel image</li>
+<li>Basic HYP mode support - boots up uboot in EL2 privileged mode</li>
+<li>MMCSD support</li>
+<li>SD card boot support</li>
+<li>USB Host and mass storage support</li>
+<li>Support for DFU download to SD card, eMMC</li>
+<li>UFS support</li>
+<li>eMMC boot support</li>
+</ul>
+</li>
+<li>Kernel: Kernel image includes support for the following drivers<ul>
+<li>MMC support</li>
+<li>I2C support</li>
+<li>CPSW2G Ethernet driver</li>
+<li>UART driver, UART console support</li>
+<li>USB driver with support for device/host mode of operation</li>
+<li>PCIe Root Complex  and Endpoint drivers</li>
+<li>CPSW9G Virtual driver</li>
+<li>USB gadget driver support<ul>
+<li>Composite device</li>
+<li>Multifunction composite device</li>
+</ul>
+</li>
+<li>USB DRD dual role support</li>
+<li>Support for dual voltage SD cards (UHS mode)</li>
+<li>PCIe backplane support</li>
+<li>PCIe Gen3 2xlane support</li>
+<li>eMMC HS400 speed mode support</li>
+<li>UART DMA mode support</li>
+<li>UFS support</li>
+<li>ADC basic functionality</li>
+<li>Crypto acceleration support for AES, 3-DES, and RNG</li>
+</ul>
+</li>
+<li>Graphics:<ul>
+<li>Support for OpenGL ® ES 1.x, OpenGL ® ES 2.0 and OpenGL ® ES 3.2 APIs</li>
+<li>Weston window composition with GPU acceleration support</li>
+<li>DRM-based display backend</li>
+<li>Offscreen rendering mode support</li>
+<li>DMABUF buffer import support</li>
+<li>Support for YUV texture formats</li>
+<li>Support for GPU profiling tools (PVRTrace and PVRTune)</li>
+</ul>
+</li>
+<li>IPC:<ul>
+<li>IPC support between<ul>
+<li>A72 to C7x</li>
+<li>A72 to each C66x core</li>
+<li>A72 to each MainSS R5F core</li>
+<li>A72 to each MCU island R5F core</li>
+</ul>
+</li>
+<li>Support for IPC in both IPC-only mode (core loaded by u-boot) and remoteproc mode (core loaded by Linux Kernel)</li>
+<li>Mailbox and H/W spinlock support</li>
+</ul>
+</li>
+<li>Display:<ul>
+<li>DSS support for cropping, scaling, gamma correction, per-pixel blending and global alpha blending</li>
+<li>DSS support for Color Space Conversion (CSC) and Color Phase Rotation (CPR)</li>
+<li>DRM API support</li>
+<li>Support for NV12, UYVY, and XRGB888 data</li>
+<li>Static partitioning of DSS resources and using video pipelines on shared videoport</li>
+</ul>
+</li>
+<li>Audio:<ul>
+<li>Audio playback and Audio record support at 48 KHz, 24 bits per sample</li>
+<li>Stereo and Multichannel support</li>
+<li>Multi-codec support</li>
+<li>McASP: Master and slave mode support</li>
+<li>Multi-codec support with separate serializer per codec</li>
+</ul>
+</li>
+<li>Virtualization:<ul>
+<li>Jailhouse hypervisor support</li>
+<li>Static system partitioning: SD/eMMC, sproxy threads, UARTs, etc.</li>
+<li>IO isolation between VMs</li>
+<li>PVU and SMMU backed IO isolation support</li>
+<li>Inter VM shared memory based communication</li>
+</ul>
+</li>
+<li>Profiling<ul>
+<li>A72 PMU support for Performance profiling</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="component-versions">
+<h3>2.1.5.3. Component versions<a class="headerlink" href="#component-versions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="18%" />
+<col width="36%" />
+<col width="18%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">component</th>
+<th class="head">source</th>
+<th class="head">branch</th>
+<th class="head">version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>arm-trusted-firmware</td>
+<td>git://git.ti.com/atf/arm-trusted-firmware.git</td>
+<td>ti-atf</td>
+<td>52c334fc361194e3896ea3b2529c10a06e586a5f</td>
+</tr>
+<tr class="row-odd"><td>optee-os</td>
+<td>git://git.ti.com/optee/ti-optee-os.git</td>
+<td>ti-optee-os</td>
+<td>199fca17b575d4c748c9c435e908a6ec9618c75a</td>
+</tr>
+<tr class="row-even"><td>U-boot</td>
+<td>git://git.ti.com/ti-u-boot/ti-u-boot.git</td>
+<td>ti-u-boot-2020.01</td>
+<td>3c9ebdb87d65aacc4ec302be8bef3df15364bacd</td>
+</tr>
+<tr class="row-odd"><td>Linux Kernel</td>
+<td>git://git.ti.com/ti-linux-kernel/ti-linux-kernel.git</td>
+<td>ti-linux-5.4.y</td>
+<td>9574bba32a1898794895ca3816e815154c80226d</td>
+</tr>
+<tr class="row-even"><td>Jailhouse</td>
+<td>git://git.ti.com/jailhouse/ti-jailhouse.git</td>
+<td>ti-jailhouse-0.12</td>
+<td>0d059b6f2c3efeaa2466517300540498b34b7655</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="issues-tracker">
+<h2>2.1.6. Issues Tracker<a class="headerlink" href="#issues-tracker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="issues-fixed-in-this-release">
+<h3>2.1.6.1. Issues fixed in this release<a class="headerlink" href="#issues-fixed-in-this-release" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Record ID</th>
+<th class="head">Summary</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>LCPD-18910</td>
+<td>NFS boot is broken</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19067</td>
+<td>CPSW2G: UDP iperf between two EVMs shows huge packet loss</td>
+</tr>
+<tr class="row-even"><td>LCPD-18909</td>
+<td>Uboot: SPL: failed to boot from all boot devices</td>
+</tr>
+<tr class="row-odd"><td>LCPD-18853</td>
+<td>UDMA: slave_sg generates TR interrupt at the end of the transfer</td>
+</tr>
+<tr class="row-even"><td>LCPD-16120</td>
+<td>DP: Link fails right after link training, unless voltage swing is 2 or 3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="errata-workarounds">
+<h3>2.1.6.2. Errata workarounds<a class="headerlink" href="#errata-workarounds" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="11%" />
+<col width="44%" />
+<col width="33%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Record ID</th>
+<th class="head">Summary</th>
+<th class="head">Workaround</th>
+<th class="head">ErrataID</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>LCPD-19068</td>
+<td>DSS: Disabling a layer connected to Overlay may result in synclost during the next frame</td>
+<td>&#160;</td>
+<td>i2097</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19517</td>
+<td>R5FSS: The same interrupt cannot be nested back-2-back within another interrupt</td>
+<td>&#160;</td>
+<td>i2162</td>
+</tr>
+<tr class="row-even"><td>LCPD-16605</td>
+<td>MMC: MMC1/2 Speed Issue</td>
+<td>&#160;</td>
+<td>i2090</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17220</td>
+<td>U-Boot Hyperbus: Hyperflash reads limited to 125MHz max. frequency</td>
+<td>&#160;</td>
+<td>i2088</td>
+</tr>
+<tr class="row-even"><td>LCPD-19047</td>
+<td>USB: Race condition while reading TRB from system memory in device mode</td>
+<td>&#160;</td>
+<td>i2067</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16350</td>
+<td>DSS: Frame Buffer Flip/Mirror Feature Using RGB24/BGR24 Packed Format can Result in Pixel Corruption</td>
+<td>If the RGB24 or BGR24 packed format is selected, then use the GPU to implement the flip/mirror operation.</td>
+<td>i2039</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="open-defects">
+<h3>2.1.6.3. Open Defects<a class="headerlink" href="#open-defects" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="13%" />
+<col width="50%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Record ID</th>
+<th class="head">Summary</th>
+<th class="head">Workaround</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>LCPD-16130</td>
+<td>Exception triggered by drm_dev_unregister during poweroff</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16208</td>
+<td>FIFO Underflows during video playback on 4k panel</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-16366</td>
+<td>RGX kick test fails when 32 sync dependencies are set for each command</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16505</td>
+<td>Wrong clock rate is reported for 157:400, 157:401 (HSDIVIDER after PLL4 and 15)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-16531</td>
+<td>video decode: vxd_dec warnings displayed at end of gstreamer hevc playback to kmssink for certain video</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16535</td>
+<td>remoteproc/k3-dsp: PDK IPC echo test binaries fails to do IPC in remoteproc mode on second run</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-16545</td>
+<td>remoteproc/k3-r5f: PDK IPC echo_test image fails to boot up in remoteproc mode on second run</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16591</td>
+<td>PCIe wifi ping stress test failed</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-16616</td>
+<td>Jailhouse: Failure in mhdp probe while restarting the Linux VM</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16628</td>
+<td>Could not enumerate PLEXTOR pcie SSD</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-16836</td>
+<td>DP: GeChic display EDID read failures with custom DP cable</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16921</td>
+<td>GPU driver doesn’t unregister genpd name on unload</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17006</td>
+<td>4k DP Display Shows Blank Screen sometimes when booting</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17213</td>
+<td>Weston sometimes fails to start when booting with nfs filesystem</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17284</td>
+<td>remoteproc/k3-r5: Cores are started out-of-order when core 0 file size &gt;&gt; core 1 file size</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17387</td>
+<td>Underflow and CRTC SYNC LOST observed while running GLMark2 (1x1080p + 1x4k)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17398</td>
+<td>J7 Beta board hangs and cannot power cycle via automation interface</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17403</td>
+<td>PAT: DMA-API warning</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17406</td>
+<td>U-boot: Uboot has no knowledge of memory reserved for remote cores</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17418</td>
+<td>J7 sometimes failed to boot</td>
+<td>Flash firmware into mmc rootfs</td>
+</tr>
+<tr class="row-even"><td>LCPD-17421</td>
+<td>CPSW9G: Can’t bring up interface over NFS</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17543</td>
+<td>Some cpuhotplug tests failed</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17673</td>
+<td>No software documentation for the Timer module</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17770</td>
+<td>U-Boot: Fix order of MCU R5 shutdown depending on cluster mode</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17780</td>
+<td>Mbox timedout in resp</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17794</td>
+<td>ext4write failed to write firmware to SD card</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17798</td>
+<td>2020 LTS: INTA/INTR smp_affinity failure and IRQ allocation issues.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17814</td>
+<td>Kingston 16G card could not boot to uboot prompt</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-18056</td>
+<td>PVR Errors observed while running deqp-gles</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-18115</td>
+<td>PVR Error observed while running glmark2</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-18233</td>
+<td>MMC irq affinity to core 1 is not working.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-18258</td>
+<td>IPSEC perfomance failures</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-18754</td>
+<td>U-Boot: Upstream: DTB getting over-written when booting kernel</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-18851</td>
+<td>UYVY texture test needs update</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-18860</td>
+<td>isolcpus in the command line is not honored</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-18894</td>
+<td>J7 failed to boot to kernel occasionally</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-18912</td>
+<td>QSPI read performance decreased</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19046</td>
+<td>Very low IPSEC throughput</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19121</td>
+<td>Displayport is not initialized</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19164</td>
+<td>perf utility missing from upstream rootfs</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19177</td>
+<td>u-boot:pytest: test_efi_helloworld_net failed on am6 and J7</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19519</td>
+<td>Kernel: RT Linux build error with SPI NOR hack to find the PHY pattern location</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19659</td>
+<td>Doc: PCIe: Update documentation to indicate how to move to compliance mode</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19664</td>
+<td>Upstream: kernel MMC dts properties need to avoid _ in property names</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19732</td>
+<td>Errors observed in boot log</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19740</td>
+<td>TLS1.2 hangs on handshake</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19772</td>
+<td>ATF/Uboot GTC frequency handover bug</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19792</td>
+<td>j721e boot fails sometimes due to EL1 exception</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19818</td>
+<td>CPSW2G netperf egress performance lower</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19819</td>
+<td>KMS ALPHABLEND tests fail due to no attribute ‘get_default_mode’</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19820</td>
+<td>DP tests fail due to unexpected mode frequency</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19822</td>
+<td>ARM benchmark testcases returning lower than expected performance</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19828</td>
+<td>Failed to start Start psplash boot splash screen</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19829</td>
+<td>Failed to start Synchronize System and HW clocks.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19838</td>
+<td>Cryptodev not building against 5.10 kernel</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19846</td>
+<td>lp-12395: Uboot emmc raw read write performance is out of expected range</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19848</td>
+<td>lp-15576: Uboot UFS raw read write performance out of expected range</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19854</td>
+<td>PCIe: EP: Low Throughput using DMA</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19858</td>
+<td>OE: OPTEE label used in SDK is old and wrong</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="known-issues-limitations">
+<h3>2.1.6.4. Known issues &amp; limitations<a class="headerlink" href="#known-issues-limitations" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="13%" />
+<col width="50%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Record ID</th>
+<th class="head">Summary</th>
+<th class="head">Workaround</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>LCPD-19636</td>
+<td>J7: OSPI Boot broken</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-16396</td>
+<td>J721E: RC: Unsupported request in configuration completion packets results in an abort</td>
+<td>Workaround for Multifunction: Configure all the physical functions supported by the endpoint. For configuring all the 6 functions of PCIe  controller instance ‘1’ in J721E, the following can be used. mount -t configfs none /sys/kernel/config; cd /sys/kernel/config/pci_ep/; mkdir functions/pci_epf_test/func1; echo 0x104c &gt; functions/pci_epf_test/func1/vendorid; echo 0xb00d &gt; functions/pci_epf_test/func1/deviceid; echo 1 &gt; functions/pci_epf_test/func1/msi_interrupts; echo 16 &gt; functions/pci_epf_test/func1/msix_interrupts; ln -s functions/pci_epf_test/func1 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func2; echo 0x104c &gt; functions/pci_epf_test/func2/vendorid; echo 0xb00d &gt; functions/pci_epf_test/func2/deviceid; echo 1 &gt; functions/pci_epf_test/func2/msi_interrupts; echo 16 &gt; functions/pci_epf_test/func2/msix_interrupts; ln -s functions/pci_epf_test/func2 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func3; echo 0x104c &gt; functions/pci_epf_test/func3/vendorid; echo 0xb00d &gt; functions/pci_epf_test/func3/deviceid; echo 1 &gt; functions/pci_epf_test/func3/msi_interrupts; echo 16 &gt; functions/pci_epf_test/func3/msix_interrupts; ln -s functions/pci_epf_test/func3 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func4; echo 0x104c &gt; functions/pci_epf_test/func4/vendorid; echo 0xb00d &gt; functions/pci_epf_test/func4/deviceid; echo 1 &gt; functions/pci_epf_test/func4/msi_interrupts; echo 16 &gt; functions/pci_epf_test/func4/msix_interrupts; ln -s functions/pci_epf_test/func4 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func5; echo 0x104c &gt; functions/pci_epf_test/func5/vendorid; echo 0xb00d &gt; functions/pci_epf_test/func5/deviceid; echo 1 &gt; functions/pci_epf_test/func5/msi_interrupts; echo 16 &gt; functions/pci_epf_test/func5/msix_interrupts; ln -s functions/pci_epf_test/func5 controllers/d800000.pcie-ep/; mkdir functions/pci_epf_test/func6; echo 0x104c &gt; functions/pci_epf_test/func6/vendorid; echo 0xb00d &gt; functions/pci_epf_test/func6/deviceid; echo 1 &gt; functions/pci_epf_test/func6/msi_interrupts; echo 16 &gt; functions/pci_epf_test/func6/msix_interrupts; ln -s functions/pci_epf_test/func6 controllers/d800000.pcie-ep/; echo 1 &gt; controllers/d800000.pcie-ep/start; echo 1 &gt; /sys/bus/pci/devices/0000:00:00.0/remove; echo 1 &gt; /sys/bus/pci/rescan; Workaround for switch card: No workarounds available.</td>
+</tr>
+<tr class="row-even"><td>LCPD-16640</td>
+<td>PCIe RC: GIC ITS misbehaves when more than 4 devices use it simultaneously</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17171</td>
+<td>Uboot dhcp occasionally failed</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-17172</td>
+<td>Uboot USBhost: Sandisk Extreme USB 3.0 msc stick could not be detected at second time</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-17789</td>
+<td>UBOOT J7:  Could not see UFS device by scsi scan</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-18790</td>
+<td>eMMC tests failed on J7 rev E2 EVM</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19068</td>
+<td>DSS: Disabling a layer connected to Overlay may result in synclost during the next frame</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19084</td>
+<td>Few SD cards not enumerating in Kernel with Alpha EVM</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>LCPD-19647</td>
+<td>Poweroff Command Causing Kernel Panic</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>LCPD-19776</td>
+<td>j7: uboot: some socketed evms fail to boot</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="rubric" id="installation-and-usage">Installation and Usage</p>
+<p>The <a class="reference external" href="index.html">Software Developer’s Guide</a> provides instructions on how to setup your Linux development environment, install the SDK and start your development. It also includes User’s Guides for various Example Applications.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="rubric" id="host-support">Host Support</p>
+<p>For the specific supported hosts for current SDK, see <a class="reference external" href="Release_Specific_Supported_Platforms_and_Versions.html">Supported Platforms</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Processor SDK Installer is 64-bit, and installs only on 64-bit host machine.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Release_Specific_Yocto_layer_Configuration.html" class="btn btn-neutral float-right" title="2.2. Yocto Layer Configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Release_Specific.html" class="btn btn-neutral" title="2. Release Specific" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'07_01_00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>

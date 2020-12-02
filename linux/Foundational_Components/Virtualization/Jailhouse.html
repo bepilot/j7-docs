@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.7.1. Jailhouse Hypervisor &mdash; Processor SDK Linux for J721e Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="Processor SDK Linux for J721e Documentation" href="../../../index.html"/>
+        <link rel="up" title="3.7. Virtualization" href="../../Foundational_Components_Virtualization.html"/>
+        <link rel="next" title="3.7.2. Docker Linux Container Runtime" href="Docker.html"/>
+        <link rel="prev" title="3.7. Virtualization" href="../../Foundational_Components_Virtualization.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="http://www.ti.com">
+            <img src="../../../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../devices/J7/linux/index.html" class="icon icon-home"> Processor SDK Linux for J721e
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                07_01_00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/J7/linux/Release_Specific.html">2. Release Specific</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../Foundational_Components.html">3. Foundational Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_U-Boot.html">3.1. U-Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Kernel.html">3.2. Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Filesystem.html">3.3. Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Tools.html">3.4. Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_IPCLLD.html">3.5. IPC Low Level Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Graphics.html">3.6. Graphics and Display</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../Foundational_Components_Virtualization.html">3.7. Virtualization</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.7.1. Jailhouse Hypervisor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keystone3-jailhouse-demo">3.7.1.1. Keystone3 Jailhouse Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Docker.html">3.7.2. Docker Linux Container Runtime</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_Machine_Learning.html">3.8. Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_ATF.html">3.9. ARM Trusted Firmware-A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Foundational_Components_OPTEE.html">3.10. OP-TEE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../How_to_Guides.html">4. How to Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Documentation_Tarball.html">5. Documentation Tarball</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../devices/J7/linux/index.html">Processor SDK Linux for J721e</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../devices/J7/linux/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../Foundational_Components.html">3. Foundational Components</a> &raquo;</li>
+      
+          <li><a href="../../Foundational_Components_Virtualization.html">3.7. Virtualization</a> &raquo;</li>
+      
+    <li>3.7.1. Jailhouse Hypervisor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jailhouse-hypervisor">
+<h1>3.7.1. Jailhouse Hypervisor<a class="headerlink" href="#jailhouse-hypervisor" title="Permalink to this headline">¶</a></h1>
+<p class="rubric" id="overview-virtualization">Overview</p>
+<p>Jailhouse is a static partitioning hypervisor that runs bare metal
+binaries. It cooperates closely with Linux. Jailhouse doesn’t emulate
+resources that don’t exist. It just splits existing hardware resources
+into isolated compartments called “cells” that are wholly dedicated to
+guest software programs called “inmates”. One of these cells runs the
+Linux OS and is known as the “root cell”. Other cells borrow CPUs and
+devices from the root cell as they are created.</p>
+<img alt="../../../_images/Jailhouse.png" src="../../../_images/Jailhouse.png" />
+<p>The picture above shows the jailhouse on a system a) before the
+jailhouse is enabled; b) after the jailhouse is enabled; c) after a cell
+is created.</p>
+<p>Jailhouse consists of three parts: kernel module, hypervisor firmware
+and tools, which a user uses to enable the hypervisor, create a cell,
+load inmate binary, run and stop it. Jailhouse is an example of
+Asynchronous Multiprocessing (AMP) architecture. When we boot Linux on
+devices wih ARM CPU clusters, Linux uses all the cores. After we
+enable hypervisor it moves Linux to the root-cell. The root cell still
+uses all the CPU cores. When we create a new cell, hypervisor calls
+cpu_down() for some of the CPU cores to offline them. The new cell
+will use these CPU cores and hardware resources dedicated for this cell in
+the cell configuration file.</p>
+<p>Jailhouse is an open source project, which can be found on
+<a class="reference external" href="https://github.com/siemens/jailhouse">https://github.com/siemens/jailhouse</a>.</p>
+<div class="section" id="keystone3-jailhouse-demo">
+<h2>3.7.1.1. Keystone3 Jailhouse Demo<a class="headerlink" href="#keystone3-jailhouse-demo" title="Permalink to this headline">¶</a></h2>
+<p>The goal of this demo is to partition the CPU cores and run a second instance of
+the Linux kernel with a ramfs root filesystem. The inmate kernel will use the
+secondary UART to provide a login shell to the user.</p>
+<p class="rubric" id="keystone3-jailhouse-demo-step1">Step 1: Host Setup</p>
+<p>As we will be running two instances of the Linux kernel, two terminals are
+required. Connect one terminal to the primary UART (e.g. /dev/ttyUSB0) and the
+other to the secondary UART (e.g. /dev/ttyUSB1).</p>
+<p class="rubric" id="keystone3-jailhouse-demo-step2">Step 2: Configure U-Boot</p>
+<p>The default boot configuration does not reserve any resources for the Jailhouse
+hypervisor nor the inmates. However, the root filesystem contains a device tree
+overlay that will carve out these requirements. U-Boot must be configured to
+apply this device tree overlay.</p>
+<p>For this step, we will be using the terminal connected to the primary UART.</p>
+<p>We will need to add the jailhouse device tree overlay to the list of overlays to
+apply in u-boot.This is controlled by the environment variable “overlay_files”.
+Processor SDK Linux J721e comes with readymade uenv.txt where this variable is set to
+define the list of DTBO files for running the jailhouse demo. Refer to the section
+<a class="reference external" href="How_to_Guides/Target/How_to_Change_dtb_File.html">How to Change dtb File</a>
+for more details on this.</p>
+<p class="rubric" id="keystone3-jailhouse-demo-step3">Step 3: Boot Linux and login</p>
+<p>Now boot the kernel and log in to the shell:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>=&gt; boot
+
+   ...
+
+ _____                    _____           _         _
+|  _  |___ ___ ___ ___   |  _  |___ ___  |_|___ ___| |_
+|     |  _| .&#39;| . | . |  |   __|  _| . | | | -_|  _|  _|
+|__|__|_| |__,|_  |___|  |__|  |_| |___|_| |___|___|_|
+              |___|                    |___|
+
+Arago Project http://arago-project.org am65xx-evm ttyS2
+
+Arago 2019.07 am65xx-evm ttyS2
+
+am65xx-evm login: root
+root@am65xx-evm:~#
+</pre></div>
+</div>
+<p class="rubric" id="keystone3-jailhouse-demo-step4">Step 4: Run the Jailhouse linux-demo</p>
+<p>The jailhouse package contains a single script to run the Linux inmate demo.
+This script combines the typical jailhouse commands to simplify running the demo
+for the first time. This script performs the following steps.</p>
+<ol class="arabic simple">
+<li>Enables jailhouse by loading and running the hypervisor firmware and
+configuring the root cell.</li>
+<li>Creates the inmate cell, providing it with its resources.</li>
+<li>Loads the inmate into memory.</li>
+<li>Starts the inmate.</li>
+</ol>
+<p>To run the demo, run the linux-demo.sh script.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>root@am65xx-evm:~# /usr/share/jailhouse/linux-demo.sh
+
+Initializing Jailhouse hypervisor v0.10 (152-g6dce20f) on CPU 2
+Code location: 0x0000ffffc0200800
+Page pool usage after early setup: mem 39/991, remap 0/131072
+Initializing processors:
+ CPU 2... OK
+ CPU 3... OK
+ CPU 1... OK
+ CPU 0... OK
+Initializing unit: irqchip
+Initializing unit: PVU IOMMU
+Initializing unit: ARM SMMU v3
+Initializing unit: PCI
+Adding virtual PCI device 00:00.0 to cell &quot;k3-am654-idk&quot;
+Initializing unit: regmap
+Page pool usage after late setup: mem 71/991, remap 144/131072
+Activating hypervisor
+[   63.162406] jailhouse: CONFIG_OF_OVERLAY disabled
+[   63.167261] jailhouse: failed to add virtual host controller
+[   63.172978] The Jailhouse is opening.
+[   63.251354] CPU2: shutdown
+[   63.254071] psci: CPU2 killed.
+[   63.303312] CPU3: shutdown
+[   63.306033] psci: CPU3 killed.
+Adding virtual PCI device 00:00.0 to cell &quot;k3-am654-idk-linux-demo&quot;
+Shared memory connection established: &quot;k3-am654-idk-linux-demo&quot; &lt;--&gt; &quot;k3-am654-idk&quot;
+Created cell &quot;k3-am654-idk-linux-demo&quot;
+Page pool usage after cell creation: mem 93/991, remap 144/131072
+[   63.355266] Created Jailhouse cell &quot;k3-am654-idk-linux-demo&quot;
+Cell &quot;k3-am654-idk-linux-demo&quot; can be loaded
+Started cell &quot;k3-am654-idk-linux-demo&quot;
+root@am65xx-evm:~#
+</pre></div>
+</div>
+<p>Now, on the secondary terminal, verify that the inmate kernel has booted with ramfs.
+Also note that the /dev/ttySX number used for root cell and inmate may or may not match.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span> _____                    _____           _         _
+|  _  |___ ___ ___ ___   |  _  |___ ___  |_|___ ___| |_
+|     |  _| .&#39;| . | . |  |   __|  _| . | | | -_|  _|  _|
+|__|__|_| |__,|_  |___|  |__|  |_| |___|_| |___|___|_|
+              |___|                    |___|
+
+Arago Project http://arago-project.org am65xx-evm /dev/ttyS1
+
+Arago 2019.07 am65xx-evm /dev/ttyS1
+
+am65xx-evm login: root
+root@am65xx-evm:~# mount
+rootfs on / type rootfs (rw,size=230400k,nr_inodes=3600)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=230400k,nr_inodes=3600,mode=755
+)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /var/volatile type tmpfs (rw,relatime,size=51200k)
+devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=000)
+</pre></div>
+</div>
+<p class="rubric" id="jailhouse-internals">Jailhouse Internals</p>
+<p>This section gives some Jailhouse details and required kernel
+modifications.</p>
+<p class="rubric" id="linux-kernel-modifications">Linux Kernel Modifications</p>
+<p>In order to run hypervisor itself and inmates, jailhouse requires
+additional nodes in kernel dtb. Refer to platform-specific jailhouse device tree
+or DT overlay for details on the required nodes or modifications.</p>
+<p class="rubric" id="memory-reservation">Memory Reservation</p>
+<p>Linux kernel has to reserve some memory for jailhouse hypervisor and for
+inmate. This memory has to be reserved statically. Following example shows
+reservation of 16MB physical memory for hypervisor and 16MB for inmates.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>/ {
+
+    reserved-memory {
+        jailhouse: jailhouse@ef000000 {
+            reg = &lt;0x0 0xef000000 0x0 0x1000000&gt;;
+            no-map;
+            status = &quot;okay&quot;;
+        };
+
+        jh_inmate: jh_inmate@ee000000 {
+            reg = &lt;0x0 0xee000000 0x0 0x1000000&gt;;
+            no-map;
+            status = &quot;okay&quot;;
+        };
+    };
+};
+</pre></div>
+</div>
+<p class="rubric" id="hardware-modules-reservation">Hardware Modules Reservation</p>
+<p>Jailhouse is a partitioning hypervisor. This means a HW peripheral is
+in exclusive control of one of the cells. Jailhouse cell config file
+defines this ownership to ensure that all accesses to peripherals
+are isolated between different cells. Access to any peripheral outside
+of the owned will be treated as violation, and jailhouse will park that
+cell. To ensure that Linux uses only the assigned peripheral, we can
+disable the peripherals which are owned by the other cell.</p>
+<p>Following nodes describe an example of how devices are disabled in the
+root cell device tree.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>/* Disable uart used by inamte cell */
+&amp;main_uart1 {
+        status = &quot;disabled&quot;;
+};
+
+/* Disable emmc instance used by inamte cell */
+&amp;main_sdhci0 {
+        status = &quot;disabled&quot;;
+};
+</pre></div>
+</div>
+<p class="rubric" id="root-cell-configuration">Root-cell configuration</p>
+<p>When hypervisor is being enabled, it creates a cell for Linux and moves
+it to that cell. The cell is called as “root-cell”. The cell
+configuration as a “*.c” file which is compiled to a special binary
+format “*.cell” file. The hypervisor uses the “cell” file to create a
+cell. The cell configuration describes memory regions and their
+attributes which will be used by the cell:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>.mem_regions = {
+     /* OCMCRAM */ {
+         .phys_start = 0x40300000,
+         .virt_start = 0x40300000,
+         .size = 0x80000,
+         .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+             JAILHOUSE_MEM_IO,
+     },
+     /* 0x40380000 - 0x48020000 */ {
+         .phys_start = 0x40380000,
+         .virt_start = 0x40380000,
+         .size = 0x7ca0000,
+         .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+             JAILHOUSE_MEM_IO,
+     },
+     /* UART... */ {
+         .phys_start = 0x48020000,
+         .virt_start = 0x48020000,
+         .size = 0xe0000,//0x00001000,
+         .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+             JAILHOUSE_MEM_IO,
+     },
+   ...
+     /* RAM */ {
+         .phys_start = 0x80000000,
+         .virt_start = 0x80000000,
+         .size = 0x6F000000,
+         .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+             JAILHOUSE_MEM_EXECUTE,
+     },
+     /* Leave hole for hypervisor */
+
+     /* RAM */ {
+         .phys_start = 0xF0000000,
+         .virt_start = 0xF0000000,
+         .size = 0x10000000,
+         .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+             JAILHOUSE_MEM_EXECUTE,
+     },
+</pre></div>
+</div>
+<p>Following code snippet shows the bitmap of CPU cores dedicated for the cell:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>.cpus = {
+        0x3,
+    },
+</pre></div>
+</div>
+<p>Following code snippet shows the bitmap of interrupt controller SPI interrupts:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>.irqchips = {
+     /* GIC */ {
+         .address = 0x48211000,
+         .pin_base = 32,
+         .pin_bitmap = {
+             0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff
+         },
+     },
+     /* GIC */ {
+         .address = 0x48211000,
+         .pin_base = 160,
+         .pin_bitmap = {
+             0xffffffff, 0, 0, 0
+         },
+     },
+ },
+</pre></div>
+</div>
+<p>These settings are for all cells.</p>
+<p>In addition, the root cell also allocates the physical memory for
+the hypervisor.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>.hypervisor_memory = {
+     .phys_start = 0xef000000,
+     .size = 0x1000000,
+ },
+</pre></div>
+</div>
+<p>The “memory regions” section is used by hypervisor to create the second
+stage MMU translation table. Usually for root-cell, the identical mapping
+is being used - “VA = PA”.</p>
+<p class="rubric" id="bare-metal-inmate-example">Bare Metal Inmate Example</p>
+<p>Jailhouse comes with inmate demos located at the <strong>inmates/demos</strong>
+directory. Current (v0.6) version has two demo inmates: <strong>gic-demo</strong> and
+<strong>uart-demo</strong>. Those are very simple bare-metal applications that
+demonstrate a uart and arm-timer interrupt. Those demos are common for
+all jailhouse platforms.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Docker.html" class="btn btn-neutral float-right" title="3.7.2. Docker Linux Container Runtime" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../Foundational_Components_Virtualization.html" class="btn btn-neutral" title="3.7. Virtualization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="http://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2020</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="http://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="http://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="http://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="http://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'07_01_00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+</body>
+</html>
